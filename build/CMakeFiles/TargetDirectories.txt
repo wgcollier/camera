@@ -1,0 +1,5 @@
+/home/bill/Projects/camera/build/CMakeFiles/edit_cache.dir
+/home/bill/Projects/camera/build/CMakeFiles/rebuild_cache.dir
+/home/bill/Projects/camera/build/src/CMakeFiles/MYQHYCCDDEMO.dir
+/home/bill/Projects/camera/build/src/CMakeFiles/edit_cache.dir
+/home/bill/Projects/camera/build/src/CMakeFiles/rebuild_cache.dir

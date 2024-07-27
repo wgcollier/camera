@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o -o MYQHYCCDDEMO  -Wl,-rpath,/home/bill/Projects/sdk_linux64_24.03.29/usr/local/lib /usr/lib/x86_64-linux-gnu/libusb-1.0.so /home/bill/Projects/sdk_linux64_24.03.29/usr/local/lib/libqhyccd.so 
