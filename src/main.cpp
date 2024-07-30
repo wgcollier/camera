@@ -56,12 +56,12 @@ class QhyResource
 
 int main()
 {
-  QhyResource camera;
-  for (int i=0; i<camera.numcameras(); i++)
+  QhyResource qhyresources;
+  for (int i=0; i<qhyresources.numcameras(); i++)
   {
     try
     {
-      auto camid = camera.getCamID(i);
+      auto camid = qhyresources.getCamID(i);
       std::cout << "Camera " << i << "has camid=" << camid << std::endl;
     }
     catch (const std::exception& e)
