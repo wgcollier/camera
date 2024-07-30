@@ -59,6 +59,7 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_function.h \
   /usr/include/c++/13/bits/stl_algo.h \
@@ -92,6 +93,7 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/cstring \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -115,6 +117,7 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -138,6 +141,8 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -281,8 +286,6 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
@@ -329,6 +332,12 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/strings.h:
+
+/usr/include/string.h:
+
 /usr/include/stdlib.h:
 
 /usr/include/stdio.h:
@@ -346,6 +355,8 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 /usr/include/linux/errno.h:
 
 /usr/include/features.h:
+
+/usr/include/ctype.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -373,13 +384,17 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
-/usr/include/c++/13/bits/locale_classes.h:
+/usr/include/c++/13/sstream:
 
-/usr/include/ctype.h:
+/usr/include/c++/13/bits/locale_classes.h:
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
 /usr/include/c++/13/bits/hashtable.h:
+
+/usr/include/errno.h:
+
+/usr/include/c++/13/bits/functional_hash.h:
 
 /usr/include/c++/13/bits/nested_exception.h:
 
@@ -416,6 +431,8 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 /usr/include/c++/13/string_view:
 
 /usr/include/alloca.h:
+
+/usr/include/c++/13/bits/sstream.tcc:
 
 /usr/include/c++/13/cwctype:
 
@@ -507,9 +524,13 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 
 /usr/include/c++/13/vector:
 
-/usr/include/c++/13/bits/std_abs.h:
+/usr/include/c++/13/cstdlib:
+
+/usr/include/c++/13/bits/std_function.h:
 
 /usr/include/c++/13/bits/postypes.h:
+
+/usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/uses_allocator.h:
 
@@ -567,6 +588,10 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 
 /usr/include/c++/13/bits/unordered_map.h:
 
+/usr/include/endian.h:
+
+/usr/include/c++/13/bits/streambuf.tcc:
+
 /usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
@@ -601,19 +626,13 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 
 /usr/include/c++/13/cstdio:
 
-/usr/include/c++/13/bits/std_function.h:
-
-/usr/include/c++/13/cstdlib:
+/usr/include/c++/13/cstring:
 
 /usr/include/c++/13/debug/assertions.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
 /usr/include/c++/13/tuple:
-
-/usr/include/c++/13/bits/functional_hash.h:
-
-/usr/include/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
@@ -664,7 +683,3 @@ src/CMakeFiles/MYQHYCCDDEMO.dir/main.cpp.o: /home/bill/Projects/camera/src/main.
 /usr/include/c++/13/typeinfo:
 
 /usr/include/c++/13/unordered_map:
-
-/usr/include/c++/13/bits/streambuf.tcc:
-
-/usr/include/endian.h:

@@ -1,9 +1,21 @@
 #include <algorithm>
+#include <cstring>
 #include <iostream>
 #include <iterator>
 #include <string>
+#include <sstream>
 #include <vector>
 #include <qhyccd.h>
+
+class QhyCameraException : public std::exception
+{
+  public:
+    QhyCameraException(std::string msg) : m_message(msg) {}
+    const char* what() {return m_message.c_str();}
+
+  private:
+    std::string m_message;
+};
 
 class QhyResource
 {
@@ -54,6 +66,52 @@ class QhyResource
     std::vector<std::string> m_cameras;
 };
 
+class QhyCamera
+{
+  public:
+    QhyCamera(std::string camid)
+    {
+      std::cout << "Constructing QhyCamera class for " << camid << std::endl;
+      m_cameraid = new char [camid.length()+1];
+      std::strcpy(m_cameraid, camid.c_str());
+      m_camhandle = OpenQHYCCD(m_cameraid);
+      if (m_camhandle == NULL)
+      {
+        std::stringstream ss;
+        ss << "Unable to open camera: " << camid;
+        std::string str(ss.str());
+        throw QhyCameraException(str);
+      }
+      std::cout << "QhyCamera " << m_cameraid << " complete." << std::endl;
+    }
+
+    ~QhyCamera()
+    {
+      if (m_camhandle != NULL)
+      {
+        auto ret = QHYCCD_ERROR;
+        ret = CloseQHYCCD(m_camhandle);
+        if (ret != QHYCCD_SUCCESS)
+        {
+          std::cout << "Unable to close camera " << m_cameraid << ":" << m_camhandle << std::endl;
+        }
+      }
+      std::cout << "Closed QhyCamera " << m_cameraid << ":" << m_camhandle << std::endl;
+    }
+
+    std::string info()
+    {
+      std::stringstream ss;
+      ss << "Camera: " << "id=" << m_cameraid << " " << "handle=" << m_camhandle;
+      std::string str(ss.str());
+      return str;
+    }
+
+  private:
+    char* m_cameraid;
+    qhyccd_handle* m_camhandle;
+};
+
 int main()
 {
   QhyResource qhyresources;
@@ -63,6 +121,8 @@ int main()
     {
       auto camid = qhyresources.getCamID(i);
       std::cout << "Camera " << i << "has camid=" << camid << std::endl;
+      QhyCamera cam(camid);
+      std::cout << "Constructed " << cam.info() << std::endl;
     }
     catch (const std::exception& e)
     {
