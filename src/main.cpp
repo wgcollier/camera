@@ -42,6 +42,20 @@ class QhyResource
       };
     };
 
+    ~QhyResource()
+    {
+      auto ret = QHYCCD_ERROR;
+      ret = ReleaseQHYCCDResource();
+      if (ret == QHYCCD_SUCCESS)
+      {
+        std::cout << "QhyResource Released" << std::endl;
+      }
+      else
+      {
+        std::cout << "QhyResource release was unsuccessful." << std::endl;
+      }
+    };
+
     auto numcameras()
     {
       return m_ncameras;
