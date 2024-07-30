@@ -5,10 +5,10 @@
 #include <vector>
 #include <qhyccd.h>
 
-class QhyCamera
+class QhyResource
 {
   public:
-    QhyCamera()
+    QhyResource()
     {
       char id[32];
       auto ret = InitQHYCCDResource();
@@ -56,7 +56,7 @@ class QhyCamera
 
 int main()
 {
-  QhyCamera camera;
+  QhyResource camera;
   for (int i=0; i<camera.numcameras(); i++)
   {
     try
