@@ -26,9 +26,10 @@ class QhyResource
       auto ret = InitQHYCCDResource();
       if (ret == QHYCCD_SUCCESS)
       {
-        m_ncameras = ScanQHYCCD();
-        if (m_ncameras > 0)
+        auto ncam = ScanQHYCCD();
+        if (ncam > 0)
         {
+          m_ncameras = ncam;
           for (int i=0; i<m_ncameras; i++)
           {
             auto status = GetQHYCCDId(i, id);
@@ -37,8 +38,11 @@ class QhyResource
           }
         }
         else {
-          std::cout << "Init QHYCCD unsuccessful";
+          std::cout << "Init QHYCCD Scan unsuccessful;  ncam=" << ncam << std::endl;
         };
+      }
+      else {
+        std::cout << "Init QHYCCD unsuccessful;  ret=" << ret << std::endl;
       };
     };
 
